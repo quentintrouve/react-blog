@@ -1,7 +1,9 @@
 .NvPost {
     background: #F3E0BE;
-    width: 100%;
+    max-width: 700px;
+    min-width: 400px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .NvPost label {
@@ -14,7 +16,7 @@
 .NvPost input,
 .NvPost textarea,
 .NvPost select {
-    width: 20%;
+    width: 90%;
     margin: auto;
 }
 
