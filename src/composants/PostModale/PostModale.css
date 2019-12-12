@@ -2,7 +2,7 @@
     background: rgb(194, 194, 194);
     width: 40%;
     min-width: 400px;
-    height: 300px;
+    height: auto;
     margin: 20px auto;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
