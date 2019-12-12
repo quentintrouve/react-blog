@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import './PostModale.css'
 
-class PostComplet extends Component {
+class PostModale extends Component {
 
     render () {
 
@@ -14,11 +14,11 @@ class PostComplet extends Component {
                     <button className="btn btn-danger my-3 btnPost">Fermer</button>
                 
                 </div>
-    
+            
             )
         
     
     }
 }
 
-export default PostComplet;
+export default PostModale;
