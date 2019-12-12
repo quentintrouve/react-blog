@@ -1,0 +1,20 @@
+.NvPost {
+    background: #F3E0BE;
+    width: 100%;
+    text-align: center;
+}
+
+.NvPost label {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.NvPost input,
+.NvPost textarea,
+.NvPost select {
+    width: 20%;
+    margin: auto;
+}
+
