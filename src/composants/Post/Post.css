@@ -6,6 +6,7 @@
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
     margin: 10px;
+      background-color: #C0DDF5;
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -14,7 +15,7 @@ h1 {
 }
 .Post:hover,
 .Post:active {
-    background-color: #C0DDF5;
+      background-color: rgb(238, 238, 238);
 }
 
 .Auteur {
