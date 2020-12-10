@@ -4,20 +4,21 @@ import './PostModale.css'
 
 class PostModale extends Component {
 
-    render () {
+    render() {
 
         return (
+            this.props.id ?
                 <div className="PostComplet">
                     <h1>Titre</h1>
                     <p>Contenu</p>
-            
+
                     <button className="btn btn-danger my-3 btnPost">Fermer</button>
-                
+
                 </div>
-            
-            )
-        
-    
+                : null
+        )
+
+
     }
 }
 
