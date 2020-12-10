@@ -9,7 +9,6 @@ class Blog extends Component {
     state = {
         posts: [],
         idSelected: null,
-        postSelected: []
     }
 
     componentDidMount() {
@@ -30,13 +29,8 @@ class Blog extends Component {
     }
 
     handleClick = id => {
-        const postSelected = this.state.posts.filter(post =>
-            post.id === id
-        )
-        console.log(postSelected)
         this.setState({
             idSelected: id,
-            postSelected: postSelected
         })
     }
 

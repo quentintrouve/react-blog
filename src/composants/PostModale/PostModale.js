@@ -6,22 +6,24 @@ import './PostModale.css'
 class PostModale extends Component {
 
     state = {
-        post: []
+        post: null
     }
 
     componentDidUpdate() {
         if (this.props.id) {
-            axios.get(`https://jsonplaceholder.typicode.com/posts/${this.props.id}`)
-                .then(response => {
-                    this.setState({ post: response.data })
-                })
+            if (!this.state.post || (this.state.post && this.state.post.id !== this.props.id)) {
+                axios.get(`https://jsonplaceholder.typicode.com/posts/${this.props.id}`)
+                    .then(response => {
+                        this.setState({ post: response.data })
+                    })
+            }
         }
     }
 
     render() {
 
         return (
-            this.props.id ?
+            this.state.post ?
                 <div className="PostComplet">
                     <h1>{this.state.post.title}</h1>
                     <p>{this.state.post.body}</p>
