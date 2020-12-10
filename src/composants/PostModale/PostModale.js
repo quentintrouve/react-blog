@@ -23,7 +23,7 @@ class PostModale extends Component {
     render() {
 
         return (
-            this.state.post ?
+            this.state.post && this.props.toggle ?
                 <div className="PostComplet">
                     <h1>{this.state.post.title}</h1>
                     <p>{this.state.post.body}</p>

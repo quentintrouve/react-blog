@@ -9,6 +9,7 @@ class Blog extends Component {
     state = {
         posts: [],
         idSelected: null,
+        toggle: false
     }
 
     componentDidMount() {
@@ -29,13 +30,12 @@ class Blog extends Component {
     }
 
     handleClick = id => {
-        this.setState({
-            idSelected: id,
-        })
+        this.setState({ idSelected: id, })
+        this.setState({ toggle: true })
     }
 
     handleCloseModal = () => {
-        this.setState({ idSelected: null })
+        this.setState({ toggle: false })
     }
 
     render() {
@@ -48,6 +48,7 @@ class Blog extends Component {
                 <h2 className="text-center my-5">Choisissez un post ...</h2>
                 <PostModale
                     id={this.state.idSelected}
+                    toggle={this.state.toggle}
                     clickCloseModal={this.handleCloseModal} />
                 <section className="Posts">
                     {this.state.posts.map(post => {
