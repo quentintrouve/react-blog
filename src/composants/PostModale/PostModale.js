@@ -12,7 +12,7 @@ class PostModale extends Component {
                     <h1>Titre</h1>
                     <p>Contenu</p>
 
-                    <button className="btn btn-danger my-3 btnPost">Fermer</button>
+                    <button className="btn btn-danger my-3 btnPost" onClick={this.props.clickCloseModal}>Fermer</button>
 
                 </div>
                 : null

@@ -31,6 +31,10 @@ class Blog extends Component {
         this.setState({ idSelected: id })
     }
 
+    handleCloseModal = () => {
+        this.setState({ idSelected: null })
+    }
+
     render() {
 
         return (
@@ -39,7 +43,7 @@ class Blog extends Component {
                     <NvPost />
                 </section>
                 <h2 className="text-center my-5">Choisissez un post ...</h2>
-                <PostModale id={this.state.idSelected} />
+                <PostModale id={this.state.idSelected} clickCloseModal={this.handleCloseModal} />
                 <section className="Posts">
                     {this.state.posts.map(post => {
                         return <Post title={post.title}
