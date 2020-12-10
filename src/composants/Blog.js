@@ -8,8 +8,10 @@ import Post from './Post/Post'
 class Blog extends Component {
     state = {
         posts: [],
-        idSelected: null
+        idSelected: null,
+        postSelected: []
     }
+
     componentDidMount() {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(response => {
@@ -28,7 +30,14 @@ class Blog extends Component {
     }
 
     handleClick = id => {
-        this.setState({ idSelected: id })
+        const postSelected = this.state.posts.filter(post =>
+            post.id === id
+        )
+        console.log(postSelected)
+        this.setState({
+            idSelected: id,
+            postSelected: postSelected
+        })
     }
 
     handleCloseModal = () => {
@@ -43,7 +52,9 @@ class Blog extends Component {
                     <NvPost />
                 </section>
                 <h2 className="text-center my-5">Choisissez un post ...</h2>
-                <PostModale id={this.state.idSelected} clickCloseModal={this.handleCloseModal} />
+                <PostModale
+                    id={this.state.idSelected}
+                    clickCloseModal={this.handleCloseModal} />
                 <section className="Posts">
                     {this.state.posts.map(post => {
                         return <Post title={post.title}
